@@ -86,7 +86,7 @@ const columns = [
 | scroll | 设置横向或纵向滚动，也可用于指定滚动区域的宽和高，可以设置为像素值，百分比，`true` 和 ['max-content'](https://developer.mozilla.org/zh-CN/docs/Web/CSS/width#max-content) | { x: number \| true, y: number } | - |  |
 | showHeader | 是否显示表头 | boolean | true |  |
 | size | 表格大小 | default \| middle \| small | default |  |
-| title | 表格标题 | Function(currentPageData) |  |  |
+| title | 表格标题 | Function(currentPageData) |  | |
 | onChange | 分页、排序、筛选变化时触发 | Function(pagination, filters, sorter, extra: { currentDataSource: [] }) |  |  |
 | onExpand | 点击展开图标时触发 | Function(expanded, record) |  |  |
 | onExpandedRowsChange | 展开的行变化时触发 | Function(expandedRows) |  |  |
@@ -141,7 +141,7 @@ const columns = [
 | sorter | 排序函数，本地排序使用一个函数(参考 [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) 的 compareFunction)，需要服务端排序可设为 true | Function\|boolean | - |  |
 | sortOrder | 排序的受控属性，外界可用此控制列的排序，可设置为 `'ascend'` `'descend'` `false` | boolean\|string | - |  |
 | sortDirections | 支持的排序方式，取值为 `'ascend'` `'descend'` | Array | `['ascend', 'descend']` | 3.15.2 |
-| title | 列头显示文字 | ReactNode\|({ sortOrder, filters }) => ReactNode | - |  |
+| title | 列头显示文字 | ReactNode\|({ sortOrder, filters }) => ReactNode | - | 3.10.0 |
 | width | 列宽度（[指定了也不生效？](https://github.com/ant-design/ant-design/issues/13825#issuecomment-449889241)） | string\|number | - |  |
 | onCell | 设置单元格属性 | Function(record, rowIndex) | - |  |
 | onFilter | 本地模式下，确定筛选的运行函数 | Function | - |  |
